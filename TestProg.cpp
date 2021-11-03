@@ -30,6 +30,12 @@ public:
      {
          return weight;
      }
+    void showData()   const
+    {
+        cout<<left<<setw(18)<<"\nТовар:"<<name;
+        cout<<setw(18)<<"\nЦіна:" <<setw(8)<<price<<" грн";
+        cout<<setw(18)<<"\nВага:"  <<setw(8)<<weight<<" кг"<<endl;
+    }
 };
  
 class Buy:public Product
@@ -71,6 +77,10 @@ class Check:private Buy
       Check(char*n, int p, float w, int cl):  Buy(n, p, w, cl)
       {
       }
+      void showData()  const
+      {
+        Product::showData();
+     }
 };
  
 int main()
