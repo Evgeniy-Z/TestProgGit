@@ -77,6 +77,6 @@ int main()
 {
     setlocale(LC_CTYPE, "rus");
     Check s1("Вареники", 235, 3.5, 5);
- 
+    Check s2("Ковбаса", 1, 50, 1);
     return 0;
 }
